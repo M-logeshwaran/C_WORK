@@ -26,6 +26,7 @@ int main()
     }
   }
   printf("\nThe ARRAY contain [ %d ] count of PRIME !\n",count);
+  printf("\nThe ARRAY contain [ %d ] count of COMPOSITE !\n",b-count);
   return 0;
     
 }
