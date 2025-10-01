@@ -4,7 +4,7 @@
 int main()
 { 
    int original,a,b,ex=0,c=0;
-   printf("enter the Number to check Armstrong :");
+   printf("Enter the Number to check Armstrong : ");
    scanf("%d",&a);
    b=a+0;
    original=a+0;
