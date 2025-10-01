@@ -9,12 +9,12 @@ int main()
   scanf("%d",&std);
   for(i;i<std;i++)
   {
-     printf("enter the height of std %d : ",i+1);
+     printf("Enter the height of std %d : ",i+1);
      scanf(" %d",&a[i]);
      sum=sum+a[i];
   }
   float avg=(float)sum/std;
-  printf("avg height is : %f",avg);
+  printf("Avg height is : %f",avg);
   
   return 0;  
 }
