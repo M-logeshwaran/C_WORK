@@ -63,7 +63,6 @@ void insertAtPos(int pos) {
 void DeleteByRoll(int roll_no) {
     if (head == NULL) return;
 
-    // If head needs to be deleted
     if (head->roll_no == roll_no) {
         struct student* temp = head;
         head = head->next;
@@ -104,8 +103,8 @@ void searchByroll(int roll_no){
 
 int nodeCount(){
     struct student * temp = head;
-    int count=1;
-    while(temp->next != NULL){
+    int count=0;
+    while(temp != NULL){
         count++;
         temp = temp->next;
     }
@@ -113,9 +112,21 @@ int nodeCount(){
 }
 
 
+int node_roll(){
+    struct student * temp = head;
+    printf("AVAIBALE ROLL NO : ");
+    while (temp != NULL) {
+        printf("[ %d ] ",temp->roll_no);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+
 int main() {
     int n;
-    printf("Enter the number of STUDENT NODE : ");
+    printf("<----- SINGLY LINKED > LIST ! -----> ");
+    printf("\n\nEnter the number of STUDENT NODE : ");
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
@@ -151,16 +162,28 @@ int main() {
             printf("\nNODES FILLED from [ %d ... %d ] POSITION !\n",1,count);       
             while(no!=0){
                 int pos;
-                printf("\nEnter The POSITION to INSERT : ",(no+1)-no);
+                printf("\nEnter The POSITION to INSERT : ");
                 scanf("%d",&pos);
                 insertAtPos(pos);
                 no--;   
             }
-            printf("\nUPDATED NODE in LIST : \n");
+            printf("\nUPDATED STUDENT NODE in LIST : \n");
             display();
         }
         else if (op == '2'){
-            break;
+            int no;
+            node_roll();
+            printf("Enter the number How many students_NODE to DELETE : ");
+            scanf("%d", &no);       
+            while(no!=0){
+                int roll;
+                printf("\nEnter The ROLL_NO to DELETE : ");
+                scanf("%d",&roll);
+                DeleteByRoll(roll);
+                no--;   
+            }
+            printf("\nUPDATED STUDENT NODE in LIST : \n");
+            display();
         }    
         else if (op == '3'){
             int roll;
@@ -177,24 +200,10 @@ int main() {
             printf("\nTOTAL STUDENT NODE COUNT : [ %d ] !\n",count);
         }         
         else{
+            printf("\n<----- PROGRAM OPERATION MENUE HAS BEEN CLOSED ! -----> \n\n");
             break;
         }
 
     }
-    /*int pos;
-    printf("Enter the position to insert a new student : ");
-    scanf("%d", &pos);
-    insertAtPos(pos);
-    display();
-
-    int roll_no;
-    printf("Enter the roll_no to delete a student : ");
-    scanf("%d", &roll_no);
-    DeleteByRoll(roll_no);
-    display();
-    
-    printf("Enter the roll_no to search a student : ");
-    scanf("%d", &roll_no);
-    searchByroll(roll_no);*/
     return 0;
 }
