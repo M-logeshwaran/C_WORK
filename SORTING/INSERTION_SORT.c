@@ -15,7 +15,7 @@ int main()
    }
 
 
-   printf("\nAFTER BUBBLE SORTED :\n");
+   printf("\nBEFORE INSERTION SORTED :\n");
    for(int i=0;i<a;i++){
         printf("%d ",arr[i]);
    }
@@ -35,7 +35,7 @@ int main()
    }         
    
 
-   printf("\n\nAFTER BUBBLE SORTED :\n");
+   printf("\n\nAFTER INSERTION SORTED :\n");
    for(int i=0;i<a;i++){
         printf("%d ",arr[i]);
    }
