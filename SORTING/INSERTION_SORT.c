@@ -6,13 +6,16 @@
 int main()
 {
    int a;
-   printf("Enter the Number : ");
+   printf("Enter the NUMBER of ELEMENT : ");
    scanf("%d",&a);
    int arr[a];
    for(int i=0;i<a;i++){
-        printf("Enter at %d index : ");
+        printf("Enter at [ %d ] INDEX : ");
         scanf("%d",&arr[i]);
    }
+
+
+   printf("\nAFTER BUBBLE SORTED :\n");
    for(int i=0;i<a;i++){
         printf("%d ",arr[i]);
    }
@@ -32,6 +35,7 @@ int main()
    }         
    
 
+   printf("\n\nAFTER BUBBLE SORTED :\n");
    for(int i=0;i<a;i++){
         printf("%d ",arr[i]);
    }
